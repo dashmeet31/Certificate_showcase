@@ -1,0 +1,62 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+}
+
+.main-bg {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  min-height: 100vh;
+}
+
+/* Gradient Border + Glassmorphic Card */
+.border-gradient {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-image: linear-gradient(#ffffff0d, #ffffff0d), linear-gradient(120deg, #00f0ff, #ff00c8);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: white;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+}
+
+.glass-card img {
+  height: 230px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.text-glow {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 8px #00fff2, 0 0 20px #ff00ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00fff2, 0 0 10px #ff00ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #ff00ff;
+  }
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
